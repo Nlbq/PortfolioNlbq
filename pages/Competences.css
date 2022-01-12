@@ -1,0 +1,693 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    text-decoration: none;
+  }
+  body{
+    /* background-color: #f5f5f7; */
+    background-color: #f1f2f6;
+  
+  }
+  /*scroll bar*/
+  ::-webkit-scrollbar {
+      width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+      background: #888;
+  }
+  ::selection{
+    background: rgb(0,123,255,0.3);
+  }
+  .content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 30px;
+  }
+  
+  /*--------------------------------------------------------NAVBAR----------------------------------------*/
+  .navbar{
+    position: fixed;
+    background: #1a2f42;
+    z-index: 5;
+    width: 100%;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+  }
+  .navbar.sticky{
+    padding: 10px 0;
+    opacity: 1;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+  }
+  .navbar .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .logo a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .navbar .logo span{
+    color: orange;
+  }
+  
+  .navbar .menu-list{
+    display: inline-flex;
+  }
+  .menu-list li{
+    list-style: none;
+  }
+  .menu-list li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .menu-list li a:hover{
+    color: orange;
+  }
+  
+  .icon{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    background-color: orange;
+  }
+  .icon.cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    
+  }
+
+  /* ------------------------------------- Navbar Responsive------------------------------------ */
+  
+
+  @media (max-width: 868px) {
+    body.disabledScroll{
+      overflow: hidden;
+    }
+    .icon{
+      display: block;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      z-index: 9;
+      
+    }
+    .icon.cancel-btn{
+      display: none;
+    }
+    .icon.cancel-btn.show{
+      display: block;
+    }
+    .icon.hide{
+      display: none;
+    }
+    .navbar .menu-list{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+      display: block;
+      padding: 40px 0;
+      text-align: center;
+      clip-path: circle(25px at calc(100% - 55px) calc(0% + 50px));
+      transition: all 0.3s ease;
+    }
+    .navbar.sticky .menu-list{
+      clip-path: circle(25px at calc(100% - 55px) calc(0% + 35px));
+    }
+    .navbar .menu-list.active{
+      clip-path: circle(75%);
+  
+      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    }
+    .navbar .menu-list li{
+      margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+      font-size: 23px;
+    }
+}
+
+@media screen and (max-width:400px){
+   
+  .navbar{
+      height: 55px;
+  }
+  .icon{
+      display: block;
+      height: 35px;
+      width: 35px;
+      text-align: center;
+      line-height: 35px;
+      border-radius: 50%;
+      z-index: 9;
+    }
+    .icon.cancel-btn{
+      display: none;
+    }
+    .icon.cancel-btn.show{
+      display: block;
+    }
+    .icon.hide{
+      display: none;
+    }
+    .navbar .menu-list{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background: #1a2f42;
+      display: block;
+      padding: 0;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .navbar.sticky .menu-list{
+      clip-path: circle(25px at calc(100% - 50px) calc(0% + 25px));
+    }
+    .navbar .menu-list.active{
+      clip-path: circle(75%);
+      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    }
+    .navbar .menu-list li{
+      margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+      font-size: 16px;
+    }
+}
+
+.fa-arrow-right,
+.fa-arrow-left{
+    color: #fff;
+    font-size: 42px;
+    border: solid 3px orange;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.fa-arrow-right:hover,
+.fa-arrow-left:hover{
+  background-color: orange;
+  color: #fff;
+}
+
+.next-page{
+    position: absolute;
+    top: 90%;
+    left: 90%;
+}
+.previous-page{
+    position: absolute;
+    top: 90%;
+    right: 90%;
+}
+
+
+@media screen and (max-width: 800px){
+
+    .fa-arrow-right,
+    .fa-arrow-left{
+      font-size: 22px;
+    }
+    .next-page{
+      display: none;
+    }
+    .previous-page{
+        display: none;
+    }
+  }
+
+
+  /*----------------------------------------------COMPETENCES-------------------------------------*/
+.competences-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.competences{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 15% 15% 25% 15%; */
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-template-rows: 15% 25% 15% 25%;
+    /* height: 80vh; */
+    /* background: #e3edf7; */
+    justify-items: center;
+    align-items: center;
+    column-gap: 100px;
+    row-gap: 50px;
+  }
+  .comp-title{
+  
+    color: #333;
+    padding: 60px 0 30px;
+    font-size: 40px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: center;
+  }
+  
+  
+  /* HTML PROGRESSBAR */
+  
+  .outer{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+    -6px 6px 10px -1px rgba(255,255,255,0.7);
+  }
+  
+  .inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255,255,255,1),
+    0.5px  0.5px 0px rgba(0,0,0,0.15),
+    0px 12px 10px -10px rgba(0,0,0,0.05);
+    
+  }
+  
+  #htmlLogo{
+    width: 100px;
+    height: 100px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    align-self: center;
+    /* align-self: flex-end; */
+  
+  }
+  
+  #cssLogo{
+    width: 70px;
+    height: 100px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    align-self: center;
+    /* align-self: flex-end; */
+  
+  
+  }
+  
+  #jsLogo{
+    width: 70px;
+    height: 100px;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    align-self: center;
+    /* align-self: flex-end; */
+  
+  
+  }
+  
+  #phpLogo{
+    width: 120px;
+    height: 80px;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    align-self: center;
+    /* align-self: flex-end; */
+  
+  
+    
+  }
+  
+  #reactLogo{
+    width: 150px;
+    height: 90px;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    align-self: center;
+    /* align-self: flex-end; */
+  
+  }
+  
+  #wordpressLogo{
+    width: 100px;
+    height: 100px;
+    grid-column-start: 3;
+    grid-row-start: 3;
+    align-self: center;
+    /* align-self: flex-end; */
+  
+  }
+  
+  #number1{
+    font-weight: 600;
+    font-size: 25px;
+    color: #555;
+  }
+  
+  .skill-1{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    grid-column-start: 1;
+    grid-row-start: 2;
+  
+  }
+  
+  #circle1{
+    fill: none;
+    stroke: url(#GradientColor1);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim1 3s linear forwards;
+  }
+  
+  svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  @keyframes anim1{
+    100%{
+      stroke-dashoffset: 130;
+    }
+  }
+  
+  /* CSS PROGRESSBAR */
+  
+  .skill-2{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  
+  #number2{
+    font-weight: 600;
+    font-size: 25px;
+    color: #555;
+  }
+  
+  #circle2{
+    fill: none;
+    stroke: url(#GradientColor2);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim2 3s linear forwards;
+  }
+  
+  @keyframes anim2{
+    100%{
+      stroke-dashoffset: 130;
+    }
+  }
+  
+  /* JS PROGRESSBAR */
+  
+  .skill-3{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    grid-column-start: 3;
+    grid-row-start: 2;
+  }
+  
+  #number3{
+    font-weight: 600;
+    font-size: 25px;
+    color: #555;
+  }
+  
+  #circle3{
+    fill: none;
+    stroke: url(#GradientColor3);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim3 3s linear forwards;
+  }
+  
+  @keyframes anim3{
+    100%{
+      stroke-dashoffset: 200;
+    }
+  }
+  
+  /*PHP*/
+  
+  .skill-4{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    grid-column-start: 4;
+    grid-row-start: 2;
+  }
+  
+  #number4{
+    font-weight: 600;
+    font-size: 25px;
+    color: #555;
+  }
+  
+  #circle4{
+    fill: none;
+    stroke: url(#GradientColor4);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim4 2s linear forwards;
+  }
+  
+  @keyframes anim4{
+    100%{
+      stroke-dashoffset: 220;
+    }
+  }
+  
+  /* WORDPRESS */
+  
+  .skill-5{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    grid-column-start: 2;
+    grid-row-start: 4;
+  }
+  
+  #number5{
+    font-weight: 600;
+    font-size: 25px;
+    color: #555;
+  }
+  
+  #circle5{
+    fill: none;
+    stroke: url(#GradientColor5);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim5 2s linear forwards;
+  }
+  
+  @keyframes anim5{
+    100%{
+      stroke-dashoffset: 220;
+    }
+  }
+  
+  .skill-6{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    grid-column-start: 3;
+    grid-row-start: 4;
+  }
+  
+  #number6{
+    font-weight: 600;
+    font-size: 25px;
+    color: #555;
+  }
+  
+  #circle6{
+    fill: none;
+    stroke: url(#GradientColor6);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim6 3s linear forwards;
+  }
+  
+  @keyframes anim6{
+    100%{
+      stroke-dashoffset: 130;
+    }
+  }
+  @media screen and (min-width: 751px) and (max-width: 1250px) {
+  
+    .competences{
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-template-rows: 15% 25% 15% 25%;
+    gap: 10px 70px;
+    }
+  
+  
+    .skill-4{
+      grid-column-start: 1;
+      grid-row-start: 4;
+    }
+  
+    #phpLogo{
+      width: 120px;
+      height: 80px;
+      grid-column-start: 1;
+      grid-row-start: 3;
+    }
+  
+  
+  }
+  
+  @media screen and (max-width: 750px) {
+    .comp-title{
+        font-size: 30px;
+        margin-top: 70px;
+        padding: 0;
+    }
+    .competences{
+      grid-template-columns: 1fr 1fr;
+      /* grid-template-rows: 5% 18% 5% 18% 5% 18%; */
+      grid-template-rows: auto;
+  
+      gap: 20px 50px;
+      height: 100%;
+      top: 100px;
+      left: 0;
+    }
+  
+    .skill-1{
+      grid-column-start: 1;
+      grid-row-start: 3;
+      align-self: start;
+    }
+    .skill-2{
+      grid-column-start:2 ;
+      grid-row-start: 3;
+      align-self: start;
+  
+    }
+    .skill-3{
+      grid-column-start: 1;
+      grid-row-start: 5;
+      align-self: start;
+  
+    }
+    .skill-4{
+      grid-column-start: 2;
+      grid-row-start: 5;
+      align-self: start;
+  
+    }
+    .skill-5{
+      grid-column-start: 1;
+      grid-row-start: 7;
+      align-self: start;
+  
+    }
+    .skill-6{
+      grid-column-start: 2;
+      grid-row-start: 7;
+      align-self: start;
+  
+    }
+  
+    #htmlLogo{
+      width: 70px;
+      height: 70px;
+      grid-column-start: 1;
+      grid-row-start: 2;
+      align-self: center;
+    }
+    
+    #cssLogo{
+      width: 48px;
+      height: 70px;
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
+    
+    #jsLogo{
+      width: 48px;
+      height: 70px;
+      grid-column-start: 1;
+      grid-row-start: 4;
+    }
+    
+    #phpLogo{
+      width: 75px;
+      height: 50px;
+      grid-column-start: 2;
+      grid-row-start: 4;
+      align-self: center;
+    }
+    
+    #reactLogo{
+      width: 85px;
+      height: 55px;
+      grid-column-start: 1;
+      grid-row-start: 6;
+      align-self: center;
+  
+    }
+    
+    #wordpressLogo{
+      width: 70px;
+      height: 70px;
+      grid-column-start: 2;
+      grid-row-start: 6;
+    }
+  }
+  
+  
+  
+  @media  screen and (max-width: 450px) {
+    .competences{
+      display: none;
+    }
+    .skills-hide{
+      display: none;
+    }
+    .comp-title{
+        display: none;
+    }
+  
+  }

@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    text-decoration: none;
+  }
+  body{
+    /* background-color: #f5f5f7; */
+    background-color: #f1f2f6;
+  
+  }
+  /*scroll bar*/
+  ::-webkit-scrollbar {
+      width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+      background: #888;
+  }
+  ::selection{
+    background: rgb(0,123,255,0.3);
+  }
+  .content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 30px;
+  }
+  
+  /*--------------------------------------------------------NAVBAR----------------------------------------*/
+  .navbar{
+    position: fixed;
+    background: #1a2f42;
+    z-index: 5;
+    width: 100%;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+  }
+  .navbar.sticky{
+    padding: 10px 0;
+    opacity: 1;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+  }
+  .navbar .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .logo a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .navbar .logo span{
+    color: orange;
+  }
+  
+  .navbar .menu-list{
+    display: inline-flex;
+  }
+  .menu-list li{
+    list-style: none;
+  }
+  .menu-list li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .menu-list li a:hover{
+    color: orange;
+  }
+  
+  .icon{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    background-color: orange;
+  }
+  .icon.cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    
+  }
+
+  /* ------------------------------------- Navbar Responsive------------------------------------ */
+  
+
+  @media (max-width: 868px) {
+    body.disabledScroll{
+      overflow: hidden;
+    }
+    .icon{
+      display: block;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      z-index: 9;
+      
+    }
+    .icon.cancel-btn{
+      display: none;
+    }
+    .icon.cancel-btn.show{
+      display: block;
+    }
+    .icon.hide{
+      display: none;
+    }
+
+    
+    .navbar .menu-list{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background: #1a2f42;
+      display: block;
+      padding: 40px 0;
+      text-align: center;
+      clip-path: circle(25px at calc(100% - 55px) calc(0% + 50px));
+      transition: all 0.3s ease;
+    }
+    .navbar.sticky .menu-list{
+      clip-path: circle(25px at calc(100% - 55px) calc(0% + 35px));
+    }
+    .navbar .menu-list.active{
+      clip-path: circle(75%);
+  
+      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    }
+    .navbar .menu-list li{
+      margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+      font-size: 23px;
+    }
+}
+
+@media screen and (max-width:400px){
+   
+    .navbar{
+        height: 55px;
+    }
+    .icon{
+        display: block;
+        height: 35px;
+        width: 35px;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 50%;
+        z-index: 9;
+      }
+      .icon.cancel-btn{
+        display: none;
+      }
+      .icon.cancel-btn.show{
+        display: block;
+      }
+      .icon.hide{
+        display: none;
+      }
+      .navbar .menu-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: #1a2f42;
+        display: block;
+        padding: 0;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .navbar.sticky .menu-list{
+        clip-path: circle(25px at calc(100% - 50px) calc(0% + 25px));
+      }
+      .navbar .menu-list.active{
+        clip-path: circle(75%);
+        background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+      }
+      .navbar .menu-list li{
+        margin-top: 45px;
+      }
+      .navbar .menu-list li a{
+        font-size: 16px;
+      }
+}
+
+
+
+
+.fa-arrow-right,
+.fa-arrow-left{
+    color: #fff;
+    font-size: 42px;
+    border: solid 3px orange;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.fa-arrow-right:hover,
+.fa-arrow-left:hover{
+  background-color: orange;
+  color: #fff;
+}
+
+.next-page{
+    position: absolute;
+    top: 90%;
+    left: 95%;
+    margin-right: 10px;
+}
+.previous-page{
+    position: absolute;
+    top: 90%;
+    right: 95%;
+    margin-left: 10px;
+
+}
+
+
+@media screen and (max-width: 1450px){
+
+    .fa-arrow-right,
+    .fa-arrow-left{
+      font-size: 22px;
+    }
+    .next-page{
+      top: 90%;
+      left: 85%;
+    }
+    .previous-page{
+        top: 90%;
+        right: 85%;
+    }
+  }
+
+
+
+
+  /* -----------------------------------------PROJETS----------------------------------------  */
+
+.project-wrapper{
+    display: grid;
+    /* height: 100vh; */
+    min-height: 100vh;
+    height: auto;
+    gap: 20px;
+    grid-template-rows: 4% 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 5%;
+    padding: 5%  5% 10% 5%;
+    /* margin-bottom: 70px; */
+  }
+  #card1{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    padding-bottom: 4%;
+  
+  }
+  #card2{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    padding-bottom: 4%;
+  }
+  #card3{
+    grid-column-start: 3;
+    grid-row-start: 2;
+  
+    padding-bottom: 4%;
+  
+  
+  }
+  .project-card{
+    display: grid;
+    height: auto;
+    gap: 30px;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    grid-template-rows: 60% 20% 10% 10%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background: #1a2f42;
+    cursor: pointer;
+  }
+  
+  .project-card:hover{
+    transform: translateY(-0.5%);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+    transition: 0.4s;
+  }
+  .card-text{
+   height: auto;
+   padding: 0 3% 0 3%;
+   color: #fff;
+    
+  }
+  
+  .card-img{
+      height: auto;
+      width: 100%;
+  }
+  .card-header{
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+  }
+  .title-project{
+    text-align: center;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    color: #333;
+    font-size: 40px;
+    margin-top: 50px;
+  }
+  
+  .title-project span{
+    color: orange;
+  }
+  
+  .button-project{
+    background-color: orange;
+    text-decoration: none; 
+    color: #fff;
+    border: solid 2px #ffb142;
+    width: 120px;
+    text-align: center;
+    margin: auto;
+    padding: 1%;
+    border-radius: 10px;
+  }
+  
+  .button-project:hover{
+    /* background-color: #cc8e35;
+    border: solid 2px #cc8e35; */
+  
+    /* color: #fff; */
+    transform: scale(1.05);
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 500px){
+  
+    .project-wrapper{
+      height: auto;
+      grid-template-columns: 1fr ;
+      grid-template-rows: 2% 1fr 1fr 1fr;
+    }
+  
+    .project-card{
+      width: 70%;
+      height: 100%;
+      grid-template-rows: 40% 10% 10% 10%;
+      font-weight: bold;
+      justify-self: center;
+    }
+  
+    .card-img{
+      height: 100%;
+      width: 100%;
+  }
+  
+    .card-text{
+      display: none;
+    }
+  
+    .card-header{
+      font-size: 20px;
+  
+  }
+  
+    #card1{
+      grid-row-start: 2;
+      grid-column-start: 1;
+    }
+  
+    #card2{
+      grid-row-start: 3;
+      grid-column-start: 1;
+    }
+    #card3{
+      grid-row-start: 4;
+      grid-column-start: 1;
+    }
+    .title-project{
+      text-align: center;
+      justify-content: center;
+      grid-column-start: 1;
+      grid-row-start: 1;
+      margin-top: 60px;
+      font-size: 22px;
+    }
+    .previous-page,
+    .next-page{
+        display: none;
+    }
+  }
+  
+  @media screen and (min-width: 500px) and (max-width:850px){
+  
+    .project-wrapper{
+      height: 100%;
+      grid-template-columns: 1fr ;
+      grid-template-rows: 2% 1fr 1fr 1fr;
+      justify-items: center;
+      gap: 50px;
+      padding: 10%;
+      }
+    
+    .project-card{
+      width: 80%;
+      height: auto;
+      justify-self: center;
+    
+    }
+    .card-text{
+      height: auto;
+      font-size: 20px;
+         
+    }
+    .card-header{
+      font-size: 35px;
+    }
+    .title-project{
+      text-align: center;
+      justify-content: center;
+      grid-column: 1;
+      grid-row-start: 1;
+      text-align: center;
+      font-size: 30px;
+      margin-top: 20px;
+    }
+    
+    #card1{
+      grid-row-start: 2;
+      grid-column-start: 1;
+        
+    }
+    #card2{
+      grid-row-start: 3;
+      grid-column-start: 1;
+    }
+    #card3{  
+      grid-row-start: 4;
+      grid-column-start: 1;
+    }
+  }
+  
+  @media screen and (min-width: 851px) and (max-width:1200px){
+  
+    .project-wrapper{
+      height: 100%;
+      grid-template-columns: 1fr 1fr 1fr 1fr ;
+      grid-template-rows: 5% 1fr;
+      gap: 4%;
+      padding: 2%;
+      }
+    
+    .project-card{
+      width: 80%;
+      height: auto;
+      align-self: start;
+      }
+  
+      .project-card:hover{
+        transform: scale(1.02);
+      }
+  
+    .card-text{
+        height: auto;
+        font-size: 20px;
+       }
+  
+    .card-header{
+         font-size: 35px;
+    }
+  
+    .title-project{
+      text-align: center;
+      justify-content: center;
+      grid-column: 2 / span 2;
+      grid-row-start: 1;
+      text-align: center;
+      font-size: 30px;
+      margin-top: 70px;
+    }
+    
+    #card1{
+        grid-column: 1 / span 2;
+        grid-row-start: 2;
+        place-self: center;
+        
+    }
+    #card2{
+        grid-row-start: 2;
+        grid-column: 3 / span 2;
+        place-self: center;
+  
+    
+    }
+    #card3{  
+      grid-row-start: 3;
+      grid-column: 1 / span 4;
+      place-self: center;
+  
+    
+    }
+  }
+  
