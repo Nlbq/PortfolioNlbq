@@ -12,7 +12,7 @@
                 <li><a href="/pages/presentation.html">Présentation</a></li>
                 <li class="skills-hide"><a href="/pages/Competences.html" class="skills-nav">Compétences</a></li>
                 <li><a href="/pages/Projets.html">Projets</a></li>
-                <li class="contact-nav"><a href="/pages/Contact2.html" >Contact</a></li>
+                <li class="contact-nav"><a href="/pages/Contact.html" >Contact</a></li>
         
             </ul>
             <div class="icon menu-btn">
@@ -23,8 +23,22 @@
               `
             }
         }
+
+
+        class MonFooter extends HTMLElement {
+            connectedCallback(){
+                this.innerHTML = `
+                <footer>
+                    <div class="footer-container">
+                        Copyright &copy; Nlbq, Tous droits réservés.
+                     </div>
+                </footer>
+              `
+            }
+        }
         
         customElements.define('ma-navbar', MaNavbar)
+        customElements.define('mon-footer', MonFooter)
 
 
 
@@ -33,8 +47,6 @@
         const menu = document.querySelector(".menu-list");
         const menuBtn = document.querySelector(".menu-btn");
         const cancelBtn = document.querySelector(".cancel-btn");
-
-
 
 
 

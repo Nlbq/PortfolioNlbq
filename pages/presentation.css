@@ -1,8 +1,7 @@
+ 
   .navbar{
     background: #1a2f42;
   }
-  
-
   .about-wrapper{
     height: 90%;
 }
@@ -189,17 +188,4 @@
         position: absolute;
         right: -50px;
     }
-}
-
-
-
-
-
-.footer-container{
-    width: 100%;
-    background: #1a2f42;
-    height: 50px;
-    color: #fff;
-    text-align: center;
-    line-height: 50px;
 }

@@ -1,28 +1,46 @@
 
 /*--------------------------------Contact--------------------------------*/
+body{
+    background-color: #f1f2f6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
+}
+
+.contact-nav{
+    color: orange;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+
+h1{
+    color: #1a2f42;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed gray;
+}
+h1 span{
+    display: block;
+}
+h1 span:nth-child(1) {
+    font-weight: normal;
+    color: orange;
+}
 
 .card-container {
     display:  grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 30px;
     /* margin: 80px 0; */
-}
-
-.card-container h1{
-  width: 100vw;
-  height: 100px;
-  color: #1a2f42;
-  border-bottom: 1px dashed gray;
-}
-
-.card-container h1 span{
-  display: block;
-}
-
-.card-container h1 span:nth-child(1){
-  font-weight: normal;
-  color: orange;
+    /* justify-self: center; */
+   
 }
 
 .card-wrapper {
@@ -85,6 +103,11 @@
     right: 30px;
     bottom: 30px;
 }
+.fa-arrow-right{
+    color: white;
+    border: none;
+    font-size: 40px;
+}
 
 .card-content span {
     font-size: 15px;
@@ -122,26 +145,35 @@
     background-color: #1a2f42;
     font-size: 14px;
     color: #fff;
-    /* transition: 
-    background-color 0.3s ease-out,
-    color 0.3s ease-out; */
     margin: auto;
     margin-top: 0;
 }
 
-/* @media screen and (max-width: 400px){
 
-    .card-container{
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-} */
+.fa-arrow-left{
+    color: orange;
+    font-size: 42px;
+    border: solid 3px orange;
+    border-radius: 50%;
+    padding: 10px;
+}
 
-@media screen and (min-width: 801px) and (max-width:1234px){
+.fa-arrow-left:hover{
+  background-color: orange;
+  color: #fff;
+}
+
+.previous-page{
+    position: absolute;
+    top: 85%;
+    left: 5%;
+}
+
+
+@media screen and (min-width: 801px) and (max-width:1500px){
 
     h1 {
-        padding: 0 0 5px;
         font-size: 22px;
-        margin-top: 70px;
     }
 
     .card-container{
@@ -203,7 +235,7 @@
 @media screen and (max-width: 539px){
 
     h1{
-        margin: 70px 0 0 0;
+        /* margin: 70px 0 0 0; */
         padding: 0 0 5px;
         font-size: 16px;
     }
@@ -249,32 +281,6 @@
         display: none;
     }
 }
-
-
-
-
-
-
-
-.fa-arrow-left{
-    color: #fff;
-    font-size: 42px;
-    border: solid 3px orange;
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.fa-arrow-left:hover{
-  background-color: orange;
-  color: #fff;
-}
-
-.previous-page{
-    position: absolute;
-    top: 90%;
-    left: 5%;
-}
-
 
 @media screen and (max-width: 800px){
 
