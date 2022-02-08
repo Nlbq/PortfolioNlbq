@@ -114,6 +114,17 @@
     }
   }
 
+  .footer-container{
+    width: 100%;
+    background: #1a2f42;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+
   /* ------------------------------------- Navbar Responsive------------------------------------ */
   
 
@@ -266,6 +277,12 @@
     .previous-page{
         display: none;
     }
+
+    .footer-container{
+      font-size: 10px;
+      height: 30px;
+      line-height: 30px;
+    }
   }
 
 
@@ -324,15 +341,6 @@
     }
   } */
 
-
-  .footer-container{
-    width: 100%;
-    background: #1a2f42;
-    height: 50px;
-    color: #fff;
-    text-align: center;
-    line-height: 50px;
-}
 
 
   
