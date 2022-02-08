@@ -3,13 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     list-style: none;
     text-decoration: none;
   }
   body{
     /* background-color: #f5f5f7; */
     background-color: #f1f2f6;
+
   
   }
   /*scroll bar*/
@@ -26,25 +27,26 @@
     background: rgb(0,123,255,0.3);
   }
   .content{
-    max-width: 1250px;
+    max-width: 1550px;
     margin: auto;
     padding: 0px 30px;
   }
-  
+
   /*--------------------------------------------------------NAVBAR----------------------------------------*/
   .navbar{
+    height: 70px;
     position: fixed;
+    background: #1a2f42;
     z-index: 5;
     width: 100%;
-    padding: 25px 0;
+    padding: 10px 0;
     transition: all 0.3s ease;
   }
-  /* .navbar.sticky{
+  .navbar.sticky{
     padding: 10px 0;
-    background: #29323c;
     opacity: 1;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
-  } */
+  }
   .navbar .content{
     display: flex;
     align-items: center;
@@ -52,7 +54,7 @@
   }
   .navbar .logo a{
     color: #fff;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
     text-decoration: none;
   }
@@ -69,14 +71,16 @@
   }
   .menu-list li a{
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
+    line-height: 10px;
     margin-left: 25px;
     text-decoration: none;
     transition: all 0.3s ease;
   }
   .menu-list li a:hover{
     color: orange;
+    /* font-size: 27px; */
   }
   
   .icon{
@@ -90,14 +94,174 @@
     position: absolute;
     right: 30px;
     top: 20px;
+    
   }
-  /* .navbar.sticky {
-    top: 50px;
-    height: 7%;
+
+  @media screen and (min-width:1600px){
+    .navbar{
+    height: 90px;
+
+    }
+    .menu-list li a{
+      font-size: 25px;
+      line-height: 60px;
+    }
+    .navbar .logo a{
+      font-size: 50px;
+    }
+    .menu-list li a:hover{
+      color: orange;
+      /* font-size: 27px; */
+    }
   }
-   */
+
+  /* ------------------------------------- Navbar Responsive------------------------------------ */
   
-  
+
+  @media screen and (min-width: 401px) and (max-width: 868px) {
+    body.disabledScroll{
+      overflow: hidden;
+    }
+    .icon{
+      display: block;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      z-index: 9;
+      
+    }
+    .icon.cancel-btn{
+      display: none;
+    }
+    .icon.cancel-btn.show{
+      display: block;
+    }
+    .icon.hide{
+      display: none;
+    }
+    .navbar .menu-list{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background: #1a2f42;
+      display: block;
+      padding: 40px 0;
+      text-align: center;
+      clip-path: circle(25px at calc(100% - 55px) calc(0% + 36px));
+      transition: all 0.3s ease;
+    }
+    .navbar.sticky .menu-list{
+      clip-path: circle(25px at calc(100% - 55px) calc(0% + 35px));
+    }
+    .navbar .menu-list.active{
+      clip-path: circle(75%);
+      background: #1a2f42;
+    }
+    .navbar .menu-list li{
+      margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+      font-size: 23px;
+    }
+}
+
+@media screen and (max-width:400px){
+   
+  .navbar{
+      height: 55px;
+  }
+  .icon{
+      display: block;
+      height: 35px;
+      width: 35px;
+      text-align: center;
+      line-height: 35px;
+      border-radius: 50%;
+      z-index: 9;
+    }
+    .icon.cancel-btn{
+      display: none;
+    }
+    .icon.cancel-btn.show{
+      display: block;
+    }
+    .icon.hide{
+      display: none;
+    }
+    .navbar .menu-list{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      /* background: #1a2f42; */
+      display: block;
+      padding: 0;
+      clip-path: circle(25px at calc(100% - 50px) calc(0% + 30px));
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .navbar.sticky .menu-list{
+      clip-path: circle(25px at calc(100% - 50px) calc(0% + 25px));
+    }
+    .navbar .menu-list.active{
+      clip-path: circle(75%);
+      background: #1a2f42;
+    }
+    .navbar .menu-list li{
+      margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+      font-size: 16px;
+    }
+}
+
+.fa-arrow-right,
+.fa-arrow-left{
+    color: #fff;
+    font-size: 42px;
+    border: solid 3px orange;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.fa-arrow-right:hover,
+.fa-arrow-left:hover{
+  background-color: orange;
+  color: #fff;
+}
+
+.next-page{
+    position: absolute;
+    top: 90%;
+    left: 90%;
+}
+.previous-page{
+    position: absolute;
+    top: 90%;
+    right: 90%;
+}
+
+@media screen and (max-width: 800px){
+
+    .fa-arrow-right,
+    .fa-arrow-left{
+      font-size: 22px;
+    }
+    .next-page{
+      display: none;
+    }
+    .previous-page{
+        display: none;
+    }
+  }
+
+
+
   
   /*-------------------------------------------ACCUEIL-----------------------------------------*/
   .accueil{
@@ -154,7 +318,7 @@
   }
 
   .fa-arrow-right{
-      color: #fff;
+      color: orange;
       font-size: 42px;
       border: solid 3px orange;
       border-radius: 50%;
@@ -162,6 +326,19 @@
   }
 
   .fa-arrow-right:hover{
+    background-color: orange;
+    color: #fff;
+  }
+
+  .fa-arrow-left{
+    color: orange;
+    font-size: 42px;
+    border: solid 3px orange;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .fa-arrow-left:hover{
     background-color: orange;
     color: #fff;
   }
@@ -194,124 +371,3 @@
 
 
   
-  
-  /* ------------------------------------- Navbar Responsive------------------------------------ */
-  
-  @media (max-width: 868px) {
-    body.disabledScroll{
-      overflow: hidden;
-    }
-    .icon{
-      display: block;
-      height: 50px;
-      width: 50px;
-      text-align: center;
-      line-height: 50px;
-      border-radius: 50%;
-      z-index: 9;
-    }
-    .icon.cancel-btn{
-      display: none;
-    }
-    .icon.cancel-btn.show{
-      display: block;
-    }
-    .icon.hide{
-      display: none;
-    }
-    .navbar .menu-list{
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100%;
-      /* background: #29323c; */
-      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-      display: block;
-      padding: 40px 0;
-      text-align: center;
-      clip-path: circle(25px at calc(100% - 55px) calc(0% + 50px));
-      transition: all 0.3s ease;
-    }
-    /* .navbar.sticky .menu-list{
-      clip-path: circle(25px at calc(100% - 55px) calc(0% + 35px));
-    } */
-    .navbar .menu-list.active{
-      clip-path: circle(75%);
-  
-      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    }
-    .navbar .menu-list li{
-      margin-top: 45px;
-    }
-    .navbar .menu-list li a{
-      font-size: 23px;
-    }
-  
-  
-    .accueil-content h1{
-      color: #fff;
-      font-weight: 600;
-      font-size: 1.8em;
-      letter-spacing: 0.015em;
-      line-height: 1.1em;
-  }
-    .accueil-content h2{
-      color:#fff;
-      padding: 10px;
-      font-weight:400;
-      font-size:1.2em;
-      margin-bottom:10px
-  }
-  }
-  
-  /* @media screen and (max-width:400px){
-   
-    .navbar{
-        height: 55px;
-    }
-    .icon{
-        display: block;
-        height: 35px;
-        width: 35px;
-        text-align: center;
-        line-height: 35px;
-        border-radius: 50%;
-        z-index: 9;
-      }
-      .icon.cancel-btn{
-        display: none;
-      }
-      .icon.cancel-btn.show{
-        display: block;
-      }
-      .icon.hide{
-        display: none;
-      }
-      .navbar .menu-list{
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100%;
-        background: #1a2f42;
-        display: block;
-        padding: 0;
-        text-align: center;
-        transition: all 0.3s ease;
-      }
-      .navbar.sticky .menu-list{
-        clip-path: circle(25px at calc(100% - 50px) calc(0% + 25px));
-      }
-      .navbar .menu-list.active{
-        clip-path: circle(75%);
-        background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-      }
-      .navbar .menu-list li{
-        margin-top: 45px;
-      }
-      .navbar .menu-list li a{
-        font-size: 16px;
-      }
-}
-   */

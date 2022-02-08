@@ -1,8 +1,43 @@
-const body = document.querySelector("body");
+        class MaNavbar extends HTMLElement {
+            connectedCallback(){
+                this.innerHTML = `
+                <nav class="navbar">
+        <div class="content">
+            <div class="logo"><a href="/index.html">N<span>.</span>L</a></div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="/index.html">Accueil</a></li>
+                <li><a href="/pages/presentation.html">Présentation</a></li>
+                <li class="skills-hide"><a href="/pages/Competences.html" class="skills-nav">Compétences</a></li>
+                <li><a href="/pages/Projets.html">Projets</a></li>
+                <li class="contact-nav"><a href="/pages/Contact2.html" >Contact</a></li>
+        
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        </nav>
+              `
+            }
+        }
+        
+        customElements.define('ma-navbar', MaNavbar)
+
+
+
+        const body = document.querySelector("body");
         const navbar = document.querySelector(".navbar");
         const menu = document.querySelector(".menu-list");
         const menuBtn = document.querySelector(".menu-btn");
         const cancelBtn = document.querySelector(".cancel-btn");
+
+
+
+
+
 
         menuBtn.onclick = () => {
             menu.classList.add("active");
@@ -17,85 +52,16 @@ const body = document.querySelector("body");
             body.classList.remove("disabledScroll");
         }
 
-        // window.onscroll = () => {
-        //     this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-        // }
+      
+
+     
 
 
-         // COMPETENCES POURCENTAGE
 
-        //HTML
-        let number1 = document.getElementById("number1");
-        let counter1 = 0;
-        setInterval(() => {
-            if(counter1 == 85){
-                clearInterval();
-            }else{
-                counter1 += 1;
-                number1.innerHTML = counter1 + "%";
-            }
-        },30)
 
-        //CSS
-        let number2 = document.getElementById("number2");
-        let counter2 = 0;
-        setInterval(() => {
-            if(counter2 == 85){
-                clearInterval();
-            }else{
 
-                counter2 += 1;
-                number2.innerHTML = counter2 + "%";
-            }
-        },30)
 
-        //JS
-        let number3 = document.getElementById("number3");
-        let counter3 = 0;
-        setInterval(() => {
-            if(counter3 == 65){
-                clearInterval();
-            }else{
 
-                counter3 += 1;
-                number3.innerHTML = counter3 + "%";
-            }
-        },30)
 
-         //PHP
-         let number4 = document.getElementById("number4");
-         let counter4 = 0;
-         setInterval(() => {
-             if(counter4 == 65){
-                 clearInterval();
-             }else{
-                 counter4 += 1;
-                 number4.innerHTML = counter4 + "%";
-             }
-         },30)
- 
-         //WORDPRESS
-         let number5 = document.getElementById("number5");
-         let counter5 = 0;
-         setInterval(() => {
-             if(counter5 == 65){
-                 clearInterval();
-             }else{
- 
-                 counter5 += 1;
-                 number5.innerHTML = counter5 + "%";
-             }
-         },30)
- 
-         //JS
-         let number6 = document.getElementById("number6");
-         let counter6 = 0;
-         setInterval(() => {
-             if(counter6 == 85){
-                 clearInterval();
-             }else{
- 
-                 counter6 += 1;
-                 number6.innerHTML = counter6 + "%";
-             }
-         },30)
+
+         

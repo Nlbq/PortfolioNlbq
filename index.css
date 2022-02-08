@@ -1,0 +1,7 @@
+.navbar{
+    background-color: transparent;
+}
+
+.menu-list li:first-child{
+    color: orange;
+}
