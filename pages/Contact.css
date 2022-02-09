@@ -48,6 +48,7 @@ h1 span:nth-child(1) {
     min-height: 300px;
     perspective: 2000px;
     perspective-origin: top;
+    box-shadow: 20px;
 }
 
 .card-wrapper:hover .card {
