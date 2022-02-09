@@ -9,8 +9,6 @@
   }
   body{
     background-color: #f1f2f6;
-
-  
   }
   /*scroll bar*/
   ::-webkit-scrollbar {
@@ -96,23 +94,6 @@
     
   }
 
-  @media screen and (min-width:1600px){
-    .navbar{
-    height: 90px;
-
-    }
-    .menu-list li a{
-      font-size: 25px;
-      line-height: 60px;
-    }
-    .navbar .logo a{
-      font-size: 50px;
-    }
-    .menu-list li a:hover{
-      color: orange;
-      /* font-size: 27px; */
-    }
-  }
 
   .footer-container{
     width: 100%;
@@ -239,6 +220,27 @@
       font-size: 23px;
     }
 }
+
+
+@media screen and (min-width:1600px){
+  .navbar{
+  height: 75px;
+
+  }
+  .menu-list li a{
+    font-size: 23px;
+    /* line-height: 20px; */
+  }
+  .navbar .logo a{
+    font-size: 50px;
+  }
+  .menu-list li a:hover{
+    color: orange;
+    /* font-size: 27px; */
+  }
+}
+
+
 .fa-arrow-right,
 .fa-arrow-left{
     color: #fff;
