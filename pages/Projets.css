@@ -1,289 +1,289 @@
 
-/* @media screen and (max-width: 1450px){
+      .project-container{
+        height: 100vh;
+        width: 80vw;
+        margin: auto;
+        /* padding-top: 8%; */
+        text-align: center;
+      }
 
-    .fa-arrow-right,
-    .fa-arrow-left{
-      font-size: 22px;
-    }
-    .next-page{
-      top: 90%;
-      left: 85%;
-    }
-    .previous-page{
-        top: 90%;
-        right: 85%;
-    }
-  } */
+      .slider-container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+        align-items: center;
+      }
 
-  /* -----------------------------------------PROJETS----------------------------------------  */
-
-.project-wrapper{
-    display: grid;
-    height: 100vh;
-    /* min-height: 100vh; */
-    /* height: auto; */
-    gap: 20px;
-    grid-template-rows: 4% 1fr;
-    grid-template-columns: 1fr 1fr 1fr ;
-    gap: 5%;
-    padding: 5%  5% 10% 5%;
-    /* margin-bottom: 70px; */
-  }
-  #card1{
-    grid-column-start: 1;
-    grid-row-start: 2;
-    padding-bottom: 4%;
-  
-  }
-  #card2{
-    grid-column-start: 2;
-    grid-row-start: 2;
-    padding-bottom: 4%;
-  }
-  #card3{
-    grid-column-start: 3;
-    grid-row-start: 2;
-  
-    padding-bottom: 4%;
-  
-  
-  }
-  .project-card{
-    display: grid;
-    height: auto;
-    gap: 30px;
-    text-align: center;
-    align-self: center;
-    width: 100%;
-    grid-template-rows: 60% 20% 10% 10%;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    background: #1a2f42;
-    cursor: pointer;
-  }
-  
-  .project-card:hover{
-    transform: translateY(-0.5%);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-    transform: scale(1.05);
-    transition: 0.4s;
-  }
-  .card-text{
-   height: auto;
-   padding: 0 3% 0 3%;
-   color: #fff;
+      .swiper {
+        width: 500px;
+        height: 500px;
     
-  }
-  
-  .card-img{
-      height: auto;
-      width: 100%;
-  }
-  .card-header{
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #fff;
-  }
-  .title-project{
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        background-color: #1a2f42;
+        color: #fff;
+        text-align: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+
+      .swiper-pagination-bullet{
+        background-color: #fff !important;
+          
+      }
+      .swiper-pagination-bullet-active {
+        background-color: orange !important;
+   }
+
+
+   .title-project{
     text-align: center;
     justify-content: center;
-    grid-column-start: 2;
-    grid-row-start: 1;
     color: #333;
-    font-size: 60px;
-    margin-top: 50px;
+    font-size: 40px;
+    padding-bottom: 3%;
+    padding-top: 10%;
+    /* margin-top: 50px; */
+  }
+
+  .sub-title-project{
+    font-size: 30px;
+    color: #333;
+    padding: 2%;
   }
   
   .title-project span{
     color: orange;
   }
-  
-  .button-project{
-    background-color: orange;
-    text-decoration: none; 
-    color: #fff;
-    border: solid 2px #ffb142;
-    width: 120px;
-    text-align: center;
-    margin: auto;
-    padding: 1%;
-    border-radius: 10px;
+      .card-header{
+          font-size: 20px;
+          margin: 0;
+          padding-top: 5%;
   }
-  
-  .button-project:hover{
-    /* background-color: #cc8e35;
-    border: solid 2px #cc8e35; */
-  
-    /* color: #fff; */
-    transform: scale(1.05);
-    font-weight: bold;
+    .card-text{
+        margin: 0;
+        padding-top: 5%;
+        padding-bottom: 5%;
   }
-  
-  @media screen and (max-width: 500px){
-  
-    .project-wrapper{
-      height: auto;
-      grid-template-columns: 1fr ;
-      grid-template-rows: 2% 1fr 1fr 1fr;
-    }
-  
-    .project-card{
-      width: 70%;
-      height: 100%;
-      grid-template-rows: 40% 10% 10% 10%;
+    .button-project {
+      text-decoration: none;
+      background-color: orange;
+      color: #fff;
       font-weight: bold;
-      justify-self: center;
-    }
-  
-    .card-img{
-      height: 100%;
-      width: 100%;
-  }
-  
-    .card-text{
-      display: none;
-    }
-  
-    .card-header{
-      font-size: 20px;
-  
-  }
-  
-    #card1{
-      grid-row-start: 2;
-      grid-column-start: 1;
-    }
-  
-    #card2{
-      grid-row-start: 3;
-      grid-column-start: 1;
-    }
-    #card3{
-      grid-row-start: 4;
-      grid-column-start: 1;
-    }
-    .title-project{
+      border: solid 2px orange;
+      border-radius: 5px;
+      padding: 5px;
       text-align: center;
-      justify-content: center;
-      grid-column-start: 1;
-      grid-row-start: 1;
-      margin-top: 60px;
-      font-size: 22px;
+  }
+
+
+
+    .swiper-button-prev{
+        margin: -150px;
+        color: orange !important;
     }
-    .previous-page,
-    .next-page{
-        display: none;
-    }
+
+    .swiper-button-next{
+      margin: -150px;
+      color: orange !important;
+  }
+
+  .sub-title-project{
+    display: none;
   }
   
-  @media screen and (min-width: 500px) and (max-width:850px){
-  
-    .project-wrapper{
-      height: 100%;
-      grid-template-columns: 1fr ;
-      grid-template-rows: 2% 1fr 1fr 1fr;
-      justify-items: center;
-      gap: 50px;
-      padding: 10%;
+
+      @media screen and (min-width: 600px) and (max-width:1150px){
+
+        .swiper {
+          width: 400px;
+          height: 400px;
+      
+        }
+
+         .title-project{
+          text-align: center;
+          justify-content: center;
+          grid-column-start: 2;
+          grid-row-start: 1;
+          color: #333;
+          font-size: 30px;
+          padding-bottom: 5%;
+        }
+      
+        .sub-title-project{
+          font-size: 20px;
+          color: #333;
+          padding: 2%;
+        }
+
+        .project-container{
+          padding-top: 9%;
+        }
+
+        .swiper-button-prev{
+          margin: -100px;
+          color: orange !important;
       }
-    
-    .project-card{
-      width: 80%;
-      height: auto;
-      justify-self: center;
-    
+  
+      .swiper-button-next{
+        margin: -100px;
+        color: orange !important;
     }
-    .card-text{
-      height: auto;
-      font-size: 20px;
-         
-    }
-    .card-header{
-      font-size: 35px;
-    }
-    .title-project{
-      text-align: center;
-      justify-content: center;
-      grid-column: 1;
-      grid-row-start: 1;
-      text-align: center;
-      font-size: 30px;
-      margin-top: 20px;
-    }
-    
-    #card1{
-      grid-row-start: 2;
-      grid-column-start: 1;
+      }
+
+      @media screen and (max-width: 400px){
+        .project-container{
+          width: 100vw;
+        }
+
+        .slider-container{
+          width: 100%;
+        }
+        .swiper {
+          /* margin-top: 6%; */
+          width: 180px;
+          height: 180px;
         
+        }
+        .icon-rotate{
+          font-size: 14px;
+          margin-top: 8%;
+          padding: 0;
+         }
+
+         .title-project{
+           padding-top: 35%;
+          font-size: 18px;
+          padding-bottom: 15%;
+        }
+
+        .card-header{
+          font-size: 10px;
+          padding-top: 1%;
+
+      }
+      .card-text{
+        font-size: 8px;
+        font-weight: bold;
+        margin: 0;
+        padding-top: 1%;
+        padding-bottom: 0%;
+      }
+      .button-project {
+          
+          font-size: 8px;
+          padding: 3px;
+          border: solid 1px orange;
+      }
+
+      .swiper-pagination-bullet{
+        width: 4px !important;
+        height: 4px !important;
+          
+      }
+
+      .swiper-button-prev{
+        transform: scale(0.7);
+        margin: -65px;
+        color: orange !important;
     }
-    #card2{
-      grid-row-start: 3;
-      grid-column-start: 1;
-    }
-    #card3{  
-      grid-row-start: 4;
-      grid-column-start: 1;
-    }
+
+    .swiper-button-next{
+      transform: scale(0.7);
+      margin: -65px;
+      color: orange !important;
   }
-  
-  @media screen and (min-width: 851px) and (max-width:1200px){
-  
-    .project-wrapper{
-      height: 100%;
-      grid-template-columns: 1fr 1fr 1fr 1fr ;
-      grid-template-rows: 5% 1fr;
-      gap: 4%;
-      padding: 2%;
+     
+    }
+
+    @media screen and (min-width: 401px) and (max-width:599px){
+      .project-container{
+        width: 100vw;
       }
-    
-    .project-card{
-      width: 80%;
-      height: auto;
-      align-self: start;
+
+      .slider-container{
+        width: 100%;
       }
-  
-      .project-card:hover{
-        transform: scale(1.02);
+      .swiper {
+        /* margin-top: 6%; */
+        width: 270px;
+        height: 270px;
+      
       }
-  
-    .card-text{
-        height: auto;
-        font-size: 20px;
+      .icon-rotate{
+        font-size: 14px;
+        margin-top: 8%;
+        padding: 0;
        }
-  
-    .card-header{
-         font-size: 35px;
+
+       .title-project{
+         padding-top: 20%;
+        font-size: 18px;
+        padding-bottom: 8%;
+      }
+
+      .card-header{
+        font-size: 10px;
+        padding-top: 1%;
+
     }
-  
-    .title-project{
-      text-align: center;
-      justify-content: center;
-      grid-column: 2 / span 2;
-      grid-row-start: 1;
-      text-align: center;
-      font-size: 30px;
-      margin-top: 70px;
+    .card-text{
+      font-size: 8px;
+      font-weight: bold;
+      margin: 0;
+      padding-top: 1%;
+      padding-bottom: 0%;
     }
-    
-    #card1{
-        grid-column: 1 / span 2;
-        grid-row-start: 2;
-        place-self: center;
+    .button-project {
+        
+        font-size: 8px;
+        padding: 3px;
+        border: solid 1px orange;
+    }
+
+    .swiper-pagination-bullet{
+      width: 4px !important;
+      height: 4px !important;
         
     }
-    #card2{
-        grid-row-start: 2;
-        grid-column: 3 / span 2;
-        place-self: center;
-  
-    
-    }
-    #card3{  
-      grid-row-start: 3;
-      grid-column: 1 / span 4;
-      place-self: center;
-  
-    
-    }
+
+    .swiper-button-prev{
+      transform: scale(0.7);
+      margin: -65px;
+      color: orange !important;
   }
-  
+
+  .swiper-button-next{
+    transform: scale(0.7);
+    margin: -65px;
+    color: orange !important;
+}
+
+    }
+    @media screen and (max-width: 300px){
+
+      .swiper-button-prev{
+        transform: scale(0.7);
+        margin: -40px;
+        color: orange !important;
+    }
+
+    .swiper-button-next{
+      transform: scale(0.7);
+      margin: -40px;
+      color: orange !important;
+  }
+    }
+
+
+
+
+

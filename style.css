@@ -94,14 +94,13 @@
     
   }
 
-
   .footer-container{
     width: 100%;
     background: #1a2f42;
-    height: 50px;
+    height: 40px;
     color: #fff;
     text-align: center;
-    line-height: 50px;
+    line-height: 40px;
 }
 
 
@@ -170,14 +169,14 @@
     }
   }
   
-  /* @media screen and (min-width: 401px) and (max-width: 868px) {
+  /* @media screen and (max-width: 450px) {
     body.disabledScroll{
       overflow: hidden;
     }
     .icon{
       display: block;
-      height: 50px;
-      width: 50px;
+      height: 28px;
+      width: 28px;
       text-align: center;
       line-height: 50px;
       border-radius: 50%;
@@ -222,7 +221,7 @@
 } */
 
 
-@media screen and (min-width:1600px){
+@media screen and (min-width:1300px){
   .navbar{
   height: 75px;
 
@@ -238,41 +237,16 @@
     color: orange;
     /* font-size: 27px; */
   }
+  
 }
 
-
-.fa-arrow-right,
-.fa-arrow-left{
-    color: #fff;
-    font-size: 42px;
-    border: solid 3px orange;
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.fa-arrow-right:hover,
-.fa-arrow-left:hover{
-  background-color: orange;
-  color: #fff;
-}
-
-.next-page{
-    position: absolute;
-    top: 90%;
-    left: 90%;
-}
-.previous-page{
-    position: absolute;
-    top: 90%;
-    right: 90%;
-}
 
 @media screen and (max-width: 800px){
 
-    .fa-arrow-right,
+    /* .fa-arrow-right,
     .fa-arrow-left{
       font-size: 22px;
-    }
+    } */
     .next-page{
       display: none;
     }
@@ -288,22 +262,9 @@
   }
 
 
-
+ 
   
-  
-  .fa-arrow-right{
-      color: orange;
-      font-size: 42px;
-      border: solid 3px orange;
-      border-radius: 50%;
-      padding: 10px;
-  }
-
-  .fa-arrow-right:hover{
-    background-color: orange;
-    color: #fff;
-  }
-
+  .fa-arrow-right,
   .fa-arrow-left{
     color: orange;
     font-size: 42px;
@@ -311,26 +272,29 @@
     border-radius: 50%;
     padding: 10px;
   }
-
+  
+  .fa-arrow-right:hover,
   .fa-arrow-left:hover{
     background-color: orange;
     color: #fff;
   }
+  
+  
+  .previous-page{
+    position: absolute;
+    transform: scale(0.8);
+    top: 85%;
+    right: 90%;
+  }
+  
 
   .next-page{
       position: absolute;
-      top: 90%;
+      transform: scale(0.8);
+      top: 85%;
       left: 90%;
   }
 
-  @media screen and (max-width: 1050px) {
-      .btn-cv span{
-          display: none;
-      }
-      .btn-cv{
-        border-radius: 50%;
-      }
-  }
 
   /* @media screen and (max-width: 800px){
 
