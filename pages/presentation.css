@@ -114,7 +114,7 @@
     text-align: center;
 }
 .about-right h1{
-    font-size: 7rem;
+    font-size: 5rem;
     text-transform: uppercase;
 }
 .about-right h1 span{
@@ -127,6 +127,7 @@
     display: flex;
     margin: 2rem 0;
 }
+
 .btn{
     border: none;
     font-size: 0.9rem;
@@ -162,7 +163,7 @@
     color: #fff;
 }
 .about-para p{
-    font-weight: 300;
+    font-weight: 500;
     padding: 0.5rem;
     opacity: 0.8;
 }

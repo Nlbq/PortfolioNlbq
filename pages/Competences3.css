@@ -3,18 +3,18 @@
     height: 100vh;
     /* width: 100vw; */
 }
-.container{
+.left-container{
     position: relative;
     width: 500px;
     margin: auto;
     padding-top: 200px;
     
 }
-.container h2 {
+.left-container h2 {
     color: #333;
 }
 
-.container .skills{
+.left-container .skills{
     position: relative;
     display: flex;
     margin: 20px 0;
@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-.container .skills:before{
+.left-container .skills:before{
     content: '';
     position: absolute;
     top: 0;
@@ -38,7 +38,7 @@
     z-index: 10;
 }
 
-.container .skills .Name{
+.left-container .skills .Name{
     position: relative;
     width: 110px;
     font-weight: 900;
@@ -50,12 +50,12 @@
     text-align: center;
 }
 
-.container .skills .Value{
+.left-container .skills .Value{
     color: #fff;
     font-weight: 900;
 }
 
-.container .skills .percent{
+.left-container .skills .percent{
     position: relative;
     width: calc(100% - 150px);
     height: 20px;
@@ -66,7 +66,7 @@
     overflow: hidden;
 }
 
-.container .skills .percent .progress{
+.left-container .skills .percent .progress{
     position: absolute;
     top: 0;
     left: 0;
