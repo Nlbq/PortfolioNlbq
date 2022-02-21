@@ -1,109 +1,42 @@
-html, 
-body{
-    height: 100vh;
-    width: 100vw;
-}
-
-.competences-wrapper{
-    display: flex;
+/* body{
     flex-direction: column;
-    height: 100vh;
-    width: 70%;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    /* background-color: #999; */
+} */
+.skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
+.skills-circles{
+    height: 100vh;
+    width: 50vw;
+    background-color: blue;
+}
 
-  .competence1{
-      /* border: solid 2px orange; */
-    border-radius: 50px;
-    background: #1a2f42;
-    border-radius: 15px;
-    /* background: #e0e0e0; */
-    box-shadow:  50px -50px 100px #c5c5c5,
-             -50px 50px 100px #fbfbfb;
-    /* box-shadow:  5px -5px 24px #868686,
-             -5px 5px 24px rgba(255,255,255,0.7); */
-    padding: 15px;
-    border-radius: 10px;
-  }
-  .comp-title{
-  padding-bottom: 100px;
-    color: #333;
+.skills-bars{
+    height: 100vh;
+    width: 50vw;
+    background-color: red;
+}
+
+.skills-circles-title{
     text-align: center;
-  }
-  
-  h3 span {
-    color: orange;
-  }
-  
-  /* HTML PROGRESSBAR */
-  
-  .outer{
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    padding: 20px;
-    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-    -1px 1px 1px -1px rgba(255,255,255,0.7);
-  }
-  
-  .inner{
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    
-    box-shadow: inset 4px 4px 4px -1px rgba(0,0,0,0.2),
-    inset -1px -1px 1px -1px rgba(255, 255, 255, 0.7),
-    /* -0.5px -0.5px 0px rgba(255,255,255,1), */
-    /* 0.5px  0.5px 0px rgba(0,0,0,0.15), */
-    0px 1px 1px -1px rgba(0,0,0,0.05);
-    
-  }
-  
-  #htmlLogo{
-    width: 40px;
-    height: 40px;
-    align-self: center;
-    padding-bottom: 5%;
-  }
-  #number1{
-    font-weight: 600;
-    font-size: 20px;
+    padding-top: 100px;
     color: #fff;
-  }
-  
-  .skill-1{
-    width: 120px;
-    height: 120px;
-    position: relative;
-    
+}
 
-  }
-  
-  #circle1{
-    fill: none;
-    stroke: url(#GradientColor1);
-    stroke-width: 20px;
-    stroke-dasharray: 380;
-    stroke-dashoffset: 380;
-    animation: anim1 3s linear forwards;
-  }
-  
-  svg{
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  @keyframes anim1{
-    100%{
-      stroke-dashoffset: 130;
-    }
-  }
+.skills-bars-title{
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+}
+
+.skills-circles-grid{
+    display: grid;
+    height: 80%;
+    background-color: blueviolet;
+}
+.skills-bars-grid{
+    display: grid;
+    height: 80%;
+    background-color: orange;
+}
