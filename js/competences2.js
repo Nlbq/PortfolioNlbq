@@ -27,7 +27,7 @@ let progress = setInterval(() => {
   valueContainer.textContent = `${progressValue}%`;
   progressBar.style.background = `conic-gradient(
     #f45127 ${progressValue * 3.6}deg,
-    #cadcff ${progressValue * 3.6}deg
+    #f1f2f6 ${progressValue * 3.6}deg
   )`;
   if (progressValue == progressEndValue) {
     clearInterval(progress);
@@ -45,7 +45,7 @@ let progress2 = setInterval(() => {
   valueContainer2.textContent = `${progressValue2}%`;
   progressBar2.style.background = `conic-gradient(
     #0565a8 ${progressValue2 * 3.6}deg,
-    #cadcff ${progressValue2 * 3.6}deg
+    #f1f2f6 ${progressValue2 * 3.6}deg
   )`;
   if (progressValue2 == progressEndValue2) {
     clearInterval(progress2);
@@ -63,7 +63,7 @@ let progress3 = setInterval(() => {
   valueContainer3.textContent = `${progressValue3}%`;
   progressBar3.style.background = `conic-gradient(
     #d9b625 ${progressValue3 * 3.6}deg,
-    #cadcff ${progressValue3 * 3.6}deg
+    #f1f2f6 ${progressValue3 * 3.6}deg
   )`;
   if (progressValue3 == progressEndValue3) {
     clearInterval(progress3);
@@ -81,7 +81,7 @@ let progress4 = setInterval(() => {
   valueContainer4.textContent = `${progressValue4}%`;
   progressBar4.style.background = `conic-gradient(
     #5373a1 ${progressValue4 * 3.6}deg,
-    #cadcff ${progressValue4 * 3.6}deg
+    #f1f2f6 ${progressValue4 * 3.6}deg
   )`;
   if (progressValue4 == progressEndValue4) {
     clearInterval(progress4);
@@ -99,7 +99,7 @@ let progress5 = setInterval(() => {
   valueContainer5.textContent = `${progressValue5}%`;
   progressBar5.style.background = `conic-gradient(
     #00b6d3 ${progressValue5 * 3.6}deg,
-    #cadcff ${progressValue5 * 3.6}deg
+    #f1f2f6 ${progressValue5 * 3.6}deg
   )`;
   if (progressValue5 == progressEndValue5) {
     clearInterval(progress5);
@@ -117,7 +117,7 @@ let progress6 = setInterval(() => {
   valueContainer6.textContent = `${progressValue6}%`;
   progressBar6.style.background = `conic-gradient(
       #111 ${progressValue6 * 3.6}deg,
-      #cadcff ${progressValue6 * 3.6}deg
+      #f1f2f6 ${progressValue6 * 3.6}deg
   )`;
   if (progressValue6 == progressEndValue6) {
     clearInterval(progress6);

@@ -1,488 +1,336 @@
 
-  /*----------------------------------------------COMPETENCES-------------------------------------*/
-.competences-wrapper{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 95vw;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.skills-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-.competences{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 15% 25% 15% 25%;
-    justify-items: center;
-    align-items: center;
-    column-gap: 100px;
-    row-gap: 50px;
-  }
-  .comp-title{
-  
-    color: #333;
-    margin-top: -150px;
-    font-size: 40px;
-    grid-column-start: 2;
-    grid-row-start: 1;
+
+.skills-circles{
+    height: 100vh;
+    width: 55vw;
+    background-color: inherit;
+}
+
+
+.skills-circles-title{
     text-align: center;
+    padding-top: 100px;
+    padding-bottom: 4%;
+    color: #1a2f42;
+    font-size: 35px;
+}
+
+
+.skills-circles-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* gap: 10% 0%; */
+    height: 70%;
+    background-color: #f1f2f6;
+}
+
+
+/* ITEMS*/
+.skill-container {
+    /* height: 250px; */
+    /* width: 175px; */
+    height: 85%;
+    width: 60%;
+    background-color: #1a2f42;
+    border-radius: 8px;
+    box-shadow: 20px 20px 40px rgba(60, 60, 150, 0.25);
+    display: grid;
+    grid-template-rows: 45% 50%;
+    place-items: center;
+    justify-self: center;
+    align-self: stretch;
   }
-  
-  h3 span {
-    color: orange;
+  /* .skill-container:hover{
+      transform: scale(1.1);
+      transition: ease-in-out 1.2s;
+  } */
+  .skill-logo {
+    height: 75px;
   }
-  
-  /* HTML PROGRESSBAR */
-  
-  .outer{
-    height: 160px;
-    width: 160px;
-    border-radius: 50%;
-    padding: 20px;
-    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-    -6px 6px 10px -1px rgba(255,255,255,0.7);
+  .skill-logo-4,
+  .skill-logo-5{
+    height: 55px;
   }
-  
-  .inner{
-    height: 120px;
-    width: 120px;
+ 
+  .circular-progress {
+    position: relative;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     display: grid;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
-    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-    -0.5px -0.5px 0px rgba(255,255,255,1),
-    0.5px  0.5px 0px rgba(0,0,0,0.15),
-    0px 12px 10px -10px rgba(0,0,0,0.05);
-    
+    place-items: center;
   }
-  
-  #htmlLogo{
-    width: 100px;
-    height: 100px;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    align-self: center;
+  .circular-progress:before {
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: #1a2f42;
+    border-radius: 50%;
   }
-  
-  #cssLogo{
-    width: 70px;
-    height: 100px;
-    grid-column-start: 2;
-    grid-row-start: 1;
-    align-self: center;
-  }
-  
-  #jsLogo{
-    width: 70px;
-    height: 100px;
-    grid-column-start: 3;
-    grid-row-start: 1;
-    align-self: center;
-  }
-  
-  #phpLogo{
-    width: 120px;
-    height: 80px;
-    grid-column-start: 4;
-    grid-row-start: 1;
-    align-self: center;
-  }
-  
-  #reactLogo{
-    width: 150px;
-    height: 90px;
-    grid-column-start: 2;
-    grid-row-start: 3;
-    align-self: center;
-  }
-  
-  #wordpressLogo{
-    width: 100px;
-    height: 100px;
-    grid-column-start: 3;
-    grid-row-start: 3;
-    align-self: center;
-  }
-  
-  #number1{
-    font-weight: 600;
-    font-size: 25px;
-    color: #555;
-  }
-  
-  .skill-1{
-    width: 160px;
-    height: 160px;
+  .value-container {
     position: relative;
-    grid-column-start: 1;
-    grid-row-start: 2;
-  
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: #fff;
   }
-  
-  #circle1{
-    fill: none;
-    stroke: url(#GradientColor1);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim1 3s linear forwards;
-  }
-  
-  svg{
+
+  /* CIRCLES COLORS */
+
+.skill-circle-2,
+.skill-circle-4,
+.skill-circle-6,
+.circular-progress-2:before,
+.circular-progress-4:before,
+.circular-progress-6:before{
+    background: #34495c;
+}
+
+
+
+
+
+  /***************************** SKILLZ BARS ***************************/
+
+.skills-bars{
+    height: 100vh;
+    background-color: orange;
+}
+
+  .skills-bars-grid{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    background-color: orange;
+}
+
+.skills-bars-title{
+    text-align: center;
+    padding-top: 100px;
+    color: #1a2f42;
+    font-size: 35px;
+    margin-bottom: 15%;
+}
+
+.skills-bars-grid .soft-skill{
+    position: relative;
+    display: flex;
+    height: 75px;
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 24px 10px 18px;
+    background: linear-gradient(#253e55 0%, #1e3447 10%, #1a2f42);
+    /* background: linear-gradient(#253e55 0%, #1e3447 10%, #1e3447); */
+    border-radius: 8px;
+    overflow: hidden;
+    border:  2px solid #333;
+    transition: 0.5s;
+    align-items: center;
+}
+
+.skills-bars-grid .soft-skill:before{
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  @keyframes anim1{
-    100%{
-      stroke-dashoffset: 130;
-    }
-  }
-  
-  /* CSS PROGRESSBAR */
-  
-  .skill-2{
-    width: 160px;
-    height: 160px;
-    position: relative;
-    grid-column-start: 2;
-    grid-row-start: 2;
-  }
-  
-  #number2{
-    font-weight: 600;
-    font-size: 25px;
-    color: #555;
-  }
-  
-  #circle2{
-    fill: none;
-    stroke: url(#GradientColor2);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim2 3s linear forwards;
-  }
-  
-  @keyframes anim2{
-    100%{
-      stroke-dashoffset: 130;
-    }
-  }
-  
-  /* JS PROGRESSBAR */
-  
-  .skill-3{
-    width: 160px;
-    height: 160px;
-    position: relative;
-    grid-column-start: 3;
-    grid-row-start: 2;
-  }
-  
-  #number3{
-    font-weight: 600;
-    font-size: 25px;
-    color: #555;
-  }
-  
-  #circle3{
-    fill: none;
-    stroke: url(#GradientColor3);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim3 3s linear forwards;
-  }
-  
-  @keyframes anim3{
-    100%{
-      stroke-dashoffset: 200;
-    }
-  }
-  
-  /*PHP*/
-  
-  .skill-4{
-    width: 160px;
-    height: 160px;
-    position: relative;
-    grid-column-start: 4;
-    grid-row-start: 2;
-  }
-  
-  #number4{
-    font-weight: 600;
-    font-size: 25px;
-    color: #555;
-  }
-  
-  #circle4{
-    fill: none;
-    stroke: url(#GradientColor4);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim4 2s linear forwards;
-  }
-  
-  @keyframes anim4{
-    100%{
-      stroke-dashoffset: 220;
-    }
-  }
-  
-  /* WORDPRESS */
-  
-  .skill-5{
-    width: 160px;
-    height: 160px;
-    position: relative;
-    grid-column-start: 2;
-    grid-row-start: 4;
-  }
-  
-  #number5{
-    font-weight: 600;
-    font-size: 25px;
-    color: #555;
-  }
-  
-  #circle5{
-    fill: none;
-    stroke: url(#GradientColor5);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim5 2s linear forwards;
-  }
-  
-  @keyframes anim5{
-    100%{
-      stroke-dashoffset: 220;
-    }
-  }
-  
-  .skill-6{
-    width: 160px;
-    height: 160px;
-    position: relative;
-    grid-column-start: 3;
-    grid-row-start: 4;
-  }
-  
-  #number6{
-    font-weight: 600;
-    font-size: 25px;
-    color: #555;
-  }
-  
-  #circle6{
-    fill: none;
-    stroke: url(#GradientColor6);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim6 3s linear forwards;
-  }
-  
-  @keyframes anim6{
-    100%{
-      stroke-dashoffset: 130;
-    }
-  }
-  @media screen and (min-width: 751px) and (max-width: 1250px) {
-  
-    .competences{
-    grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
-    grid-template-rows: 15% 25% 15% 25%;
-    gap: 10px 70px;
-    }
-  
-  
-    .skill-4{
-      grid-column-start: 1;
-      grid-row-start: 4;
-    }
-  
-    #phpLogo{
-      width: 120px;
-      height: 80px;
-      grid-column-start: 1;
-      grid-row-start: 3;
-    }
-  
-  
-  }
-  
-  @media screen and (max-width: 750px) {
-    .comp-title{
-        font-size: 30px;
-      
+    width: 100%;
+    height: 50%;
+    background: rgba(255,255,255,.08);
+    z-index: 10;
+}
 
+.skills-bars-grid .soft-skill .Name{
+    position: relative;
+    width: 110px;
+    font-weight: 900;
+    text-align: right;
+    color: #fff;
+    margin-top: -2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.skills-bars-grid .soft-skill .Value{
+    color: #fff;
+    font-weight: 900;
+}
+
+.skills-bars-grid .soft-skill .percent{
+    position: relative;
+    width: calc(100% - 150px);
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: inset 0 0 10px #000;
+    overflow: hidden;
+}
+
+.skills-bars-grid .soft-skill .percent .progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background: #cadcff;
+    box-shadow: inset 0 0 2px #000;
+    animation: animate 4s ease-in-out forwards;
+}
+
+/***************************** Bars Colors *******************************/
+#html-bar{
+    background: linear-gradient(#f24113, #d9774c);
+ 
+ }
+
+
+ 
+ @media screen and (min-width: 1200px) and (max-width:1600px){
+    .skill-container{
+        height: 225px;
+        width: 170px;
     }
-    .competences{
-      grid-template-columns: 1fr 1fr;
-      /* grid-template-rows: 5% 18% 5% 18% 5% 18%; */
-      grid-template-rows: auto;
-  
-      gap: 20px 50px;
-      height: 100%;
-      top: 100px;
-      left: 0;
-    }
-  
-    .skill-1{
-      grid-column-start: 1;
-      grid-row-start: 3;
-      align-self: start;
-    }
-    .skill-2{
-      grid-column-start:2 ;
-      grid-row-start: 3;
-      align-self: start;
-  
-    }
-    .skill-3{
-      grid-column-start: 1;
-      grid-row-start: 5;
-      align-self: start;
-  
-    }
-    .skill-4{
-      grid-column-start: 2;
-      grid-row-start: 5;
-      align-self: start;
-  
-    }
-    .skill-5{
-      grid-column-start: 1;
-      grid-row-start: 7;
-      align-self: start;
-  
-    }
-    .skill-6{
-      grid-column-start: 2;
-      grid-row-start: 7;
-      align-self: start;
-  
-    }
-  
-    #htmlLogo{
-      width: 70px;
-      height: 70px;
-      grid-column-start: 1;
-      grid-row-start: 2;
-      align-self: center;
-    }
+    .skill-logo {
+        height: 60px;
+      }
+      .skill-logo-4,
+      .skill-logo-5{
+        height: 35px;
+      }
+      .circular-progress{
+        height: 80px;
+        width: 80px;
+      }
+      .skills-bars-title{
+        margin-bottom: 100px;
+      }
+      .skills-bars-grid .soft-skill{
+        height: 60px;
+      }
+}
+
+@media screen and (min-width: 950px) and (max-width:1199px){
     
-    #cssLogo{
-      width: 48px;
-      height: 70px;
-      grid-column-start: 2;
-      grid-row-start: 2;
-    }
-    
-    #jsLogo{
-      width: 48px;
-      height: 70px;
-      grid-column-start: 1;
-      grid-row-start: 4;
-    }
-    
-    #phpLogo{
-      width: 75px;
-      height: 50px;
-      grid-column-start: 2;
-      grid-row-start: 4;
-      align-self: center;
-    }
-    
-    #reactLogo{
-      width: 85px;
-      height: 55px;
-      grid-column-start: 1;
-      grid-row-start: 6;
-      align-self: center;
-  
-    }
-    
-    #wordpressLogo{
-      width: 70px;
-      height: 70px;
-      grid-column-start: 2;
-      grid-row-start: 6;
-    }
+  .previous-page,
+  .next-page{
+      display: none;
   }
-  
-  
-  
-  @media  screen and (max-width: 450px) {
-    .competences{
-      display: none;
+    .skill-container{
+        height: 175px;
+        width: 120px;
     }
-    .skills-hide{
-      display: none;
-    }
-    .comp-title{
+    .skill-logo {
+        height: 40px;
+      }
+      .skill-logo-4,
+      .skill-logo-5{
+        height: 25px;
+      }
+      .circular-progress{
+        height: 60px;
+        width: 60px;
+      }
+      .value-container{
+          font-size: 16px;
+      }
+      .skills-bars-title{
+        margin-bottom: 70px;
+      }
+      .skills-bars-grid .soft-skill{
+        height: 60px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .skills-bars-grid .soft-skill .Name{
+          font-size: 12px;
+      }
+      .skills-bars-grid .soft-skill .Value{
+          font-weight: 900;
+          font-size: 14px;
+      }
+}
+
+@media screen and (min-width:500px) and (max-width:949px){
+    .previous-page,
+    .next-page{
         display: none;
     }
-  
-  }
-
-  @media screen and (min-width: 451px) and (max-width: 749px){
-    .comp-title{
-      padding-top: 250px;
-      padding-bottom: 3%;
-        font-size: 35px;
+    .skills-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .skills-circles{
+        width: 100vw;
+    }
+    .skills-circles-title{
+        font-size: 22px;
+        padding-top: 80px;
+    }
+    .skills-circles-grid{
+        margin: auto;
+    }
+    .skill-container{
+        height: 200px;
+        width: 130px;
+    }
+    .skill-logo {
+        height: 40px;
       }
-
-  }
-
-  @media screen and (min-width: 750px) and (max-width: 1099px){
-
-    .competences{
-      min-width: 700px;
-      column-gap: 50px;
-      row-gap: 30px;
-    }
-
-    .comp-title{
-      padding-bottom: 5%;
-        font-size: 40px;
+      .skill-logo-4,
+      .skill-logo-5{
+        height: 25px;
       }
+      .circular-progress{
+        height: 60px;
+        width: 60px;
 
-  }
-
-  @media screen and (min-width: 1100px) and (max-width: 1499px){
-
-    .competences{
-      min-width: 1000px;
-      column-gap: 30px;
-      row-gap: 30px;
-    }
-    .comp-title{
-    padding-bottom: 5%;
-      font-size: 60px;
+      }
+      .value-container{
+          font-size: 16px;
+      }
+    .skills-bars{
+        width: 100vw;
     }
 
-
-  }
-
-  @media screen and (min-width: 1500px){
-
-    .competences{
-      min-width: 1400px;
-      column-gap: 40px;
-      row-gap: 30px;
+    .skills-bars-title{
+        margin: 0;
+        padding-top: 5%;
     }
-    .comp-title{
-    padding-bottom: 5%;
-      font-size: 60px;
+
+
+    .skills-bars-grid .soft-skill{
+        /* margin: 0;
+        padding: 0; */
+        height: 55px;
     }
-  }
+
+    .skills-bars-grid .soft-skill .Name{
+        font-size: 12px;
+    }
+}
+
+
+
+
+.fa-arrow-right{
+    color: #fff;
+    border: solid 3px #fff;
+}
+.fa-arrow-right:hover{
+    color: orange;
+    background-color: #fff;
+}
+
+.footer-container{
+    position: relative;
+    bottom: 0;
+    left: 0;
+}

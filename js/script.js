@@ -10,7 +10,7 @@
                 </div>
                 <li><a href="/index.html">Accueil</a></li>
                 <li><a href="/pages/presentation.html">Présentation</a></li>
-                <li class="skills-hide"><a href="/pages/Competences4.html" class="skills-nav">Compétences</a></li>
+                <li class="skills-hide"><a href="/pages/Competences.html" class="skills-nav">Compétences</a></li>
                 <li><a href="/pages/Projets.html">Projets</a></li>
                 <li class="contact-nav"><a href="/pages/Contact.html" >Contact</a></li>
         
