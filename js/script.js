@@ -2,7 +2,7 @@
             connectedCallback(){
                 this.innerHTML = `
                 <nav class="navbar">
-        <div class="content">
+            <div class="content">
             <div class="logo"><a href="/index.html">N<span>.</span>L</a></div>
             <ul class="menu-list">
                 <div class="icon cancel-btn">

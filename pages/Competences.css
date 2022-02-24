@@ -13,8 +13,8 @@
 
 .skills-circles-title{
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 4%;
+    margin-top: 100px;
+    margin-bottom: 4%;
     color: #1a2f42;
     font-size: 35px;
 }
@@ -104,7 +104,7 @@
 
   .skills-bars-grid{
     position: relative;
-    width: 80%;
+    width: 90%;
     margin: auto;
     background-color: orange;
 }
@@ -115,6 +115,10 @@
     color: #1a2f42;
     font-size: 35px;
     margin-bottom: 15%;
+}
+
+.title-skill{
+  display: none;
 }
 
 .skills-bars-grid .soft-skill{
@@ -163,9 +167,12 @@
 
 .skills-bars-grid .soft-skill .percent{
     position: relative;
-    width: calc(100% - 150px);
+    /* width: calc(100% - 150px); */
+    width: 60%;
     height: 20px;
-    margin: 0 10px;
+    margin-left: 7%;
+    margin-right: 5%;
+    /* margin: 0 25px; */
     border-radius: 10px;
     background: #000;
     box-shadow: inset 0 0 10px #000;
@@ -269,17 +276,18 @@
     }
     .skills-circles{
         width: 100vw;
+    
     }
     .skills-circles-title{
         font-size: 22px;
-        padding-top: 80px;
+        margin-top: 12%;
     }
     .skills-circles-grid{
         margin: auto;
     }
     .skill-container{
-        height: 200px;
-        width: 130px;
+        height: 70%;
+        width: 60%;
     }
     .skill-logo {
         height: 40px;
@@ -296,6 +304,19 @@
       .value-container{
           font-size: 16px;
       }
+
+      .skill-circle-1,
+      .skill-circle-4{
+        justify-self: end;
+      }
+
+      .skill-circle-3,
+      .skill-circle-6{
+        justify-self: start;
+      }
+
+      /* Bars */ 
+
     .skills-bars{
         width: 100vw;
     }
@@ -303,18 +324,140 @@
     .skills-bars-title{
         margin: 0;
         padding-top: 5%;
+        margin-bottom: 15%;
     }
 
 
     .skills-bars-grid .soft-skill{
-        /* margin: 0;
-        padding: 0; */
         height: 55px;
     }
 
     .skills-bars-grid .soft-skill .Name{
         font-size: 12px;
     }
+}
+
+@media screen and (max-width: 499px){
+  .previous-page,
+    .next-page{
+        display: none;
+    }
+    .skills-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .skills-circles{
+      width: 100vw;
+  }
+  .skills-circles-title{
+      font-size: 16px;
+      margin-top: 25%;
+  }
+  .skills-circles-grid{
+      margin: auto;
+  }
+  .skill-container{
+      height: 140px;
+      width: 90px;
+      align-self: center;
+  }
+  .skill-logo {
+      height: 25px;
+    }
+    .skill-logo-4,
+    .skill-logo-5{
+      height: 25px;
+    }
+    .circular-progress{
+      height: 40px;
+      width: 40px;
+
+    }
+    .value-container{
+        font-size: 11px;
+    }
+
+      /* Bars */ 
+
+    .skills-bars{
+      width: 100vw;
+  }
+
+  .skills-bars-grid{
+    width: 100%;
+  }
+
+  .skills-bars-title{
+      margin: 0;
+      padding-top: 5%;
+      padding-bottom: 10%;
+      font-size: 22px;
+  }
+
+
+  .skills-bars-grid .soft-skill{
+      margin-top: 0;
+      margin-bottom: 7%;
+      /* padding: 0; */
+      height: 55px;
+      justify-content: flex-start;
+  }
+
+  .skills-bars-grid .soft-skill .Name{
+      font-size: 10px;
+      font-weight: 300;
+      /* text-transform: lowercase; */
+      width: auto;
+      display: none;
+  }
+
+  .skills-bars-grid .soft-skill .Value{
+    font-size: 10px;
+  }
+
+  .skills-bars-grid .soft-skill .percent{
+    width: 80%;
+  }
+
+.title-skill{
+  display: block;
+  margin-left: 10%;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #1a2f42;
+}
+
+  @media screen and (max-width: 280px){
+
+    .skills-circles{
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    .skills-circles-grid{
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 25px;
+    }
+
+    .skill-container{
+      align-self: start;
+    }
+
+    .skill-circle-1,
+    .skill-circle-3,
+    .skill-circle-5{
+      justify-self: end;
+    }
+
+    .skill-circle-2,
+    .skill-circle-4,
+    .skill-circle-6{
+      justify-self: start;
+    }
+  }
+
 }
 
 
