@@ -186,16 +186,12 @@
     width: 70%;
     height: 100%;
     border-radius: 10px;
-    background: #cadcff;
+    background: orange;
     box-shadow: inset 0 0 2px #000;
     animation: animate 4s ease-in-out forwards;
 }
 
-/***************************** Bars Colors *******************************/
-#html-bar{
-    background: linear-gradient(#f24113, #d9774c);
- 
- }
+
 
 
  
