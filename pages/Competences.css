@@ -345,13 +345,15 @@
 
     .skills-circles{
       width: 100vw;
+
   }
   .skills-circles-title{
-      font-size: 16px;
+      font-size: 22px;
       margin-top: 25%;
   }
   .skills-circles-grid{
-      margin: auto;
+      margin: 0 10% 0 10%;
+      height: 60vh;
   }
   .skill-container{
       height: 140px;
