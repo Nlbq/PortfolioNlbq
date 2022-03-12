@@ -387,10 +387,16 @@
   }
 
   .skills-bars-title{
-      margin: 0;
-      padding-top: 5%;
-      padding-bottom: 10%;
+      margin: auto;
+      /* margin-top: 5%; */
+      margin-bottom: 10%;
       font-size: 22px;
+      color: #fff;
+      font-weight: bold;
+      border-bottom: solid 3px #1a2f42;
+      border-radius: 3px;
+      width: 100px;
+      justify-content: center;
   }
 
 
@@ -422,9 +428,9 @@
   display: block;
   margin-left: 10%;
   padding-bottom: 5px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 900;
-  color: #1a2f42;
+  color: #fff;
 }
 
   @media screen and (max-width: 280px){
