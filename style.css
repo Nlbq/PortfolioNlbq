@@ -160,12 +160,14 @@
     .navbar .menu-list.active{
       clip-path: circle(75%);
       background: #1a2f42;
+      padding-top: 30%;
     }
     .navbar .menu-list li{
       margin-top: 45px;
     }
     .navbar .menu-list li a{
-      font-size: 16px;
+      font-size: 18px;
+      font-weight: bold;
     }
   }
   
