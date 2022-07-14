@@ -73,7 +73,7 @@ let progress3 = setInterval(() => {
 //Skill4
 
 let progressValue4 = 0;
-let progressEndValue4 = 60;
+let progressEndValue4 = 70;
 let speed4 = 15;
 
 let progress4 = setInterval(() => {
@@ -88,38 +88,39 @@ let progress4 = setInterval(() => {
   }
 }, speed4);
 
+
 //Skill5
 
 let progressValue5 = 0;
-let progressEndValue5 = 65;
+let progressEndValue5 = 70;
 let speed5 = 15;
 
 let progress5 = setInterval(() => {
   progressValue5++;
   valueContainer5.textContent = `${progressValue5}%`;
   progressBar5.style.background = `conic-gradient(
-    #00b6d3 ${progressValue5 * 3.6}deg,
+    #111 ${progressValue5 * 3.6}deg,
     #f1f2f6 ${progressValue5 * 3.6}deg
-  )`;
-  if (progressValue5 == progressEndValue5) {
-    clearInterval(progress5);
-  }
-}, speed5);
+    )`;
+    if (progressValue5 == progressEndValue5) {
+      clearInterval(progress5);
+    }
+  }, speed5);
 
-//Skill6
-
-let progressValue6 = 0;
-let progressEndValue6 = 65;
-let speed6 = 15;
-
-let progress6 = setInterval(() => {
-  progressValue6++;
-  valueContainer6.textContent = `${progressValue6}%`;
-  progressBar6.style.background = `conic-gradient(
-      #111 ${progressValue6 * 3.6}deg,
+  //Skill6
+  
+  let progressValue6 = 0;
+  let progressEndValue6 = 65;
+  let speed6 = 15;
+  
+  let progress6 = setInterval(() => {
+    progressValue6++;
+    valueContainer6.textContent = `${progressValue6}%`;
+    progressBar6.style.background = `conic-gradient(
+      #00b6d3 ${progressValue6 * 3.6}deg,
       #f1f2f6 ${progressValue6 * 3.6}deg
-  )`;
-  if (progressValue6 == progressEndValue6) {
-    clearInterval(progress6);
-  }
-}, speed6);
+    )`;
+    if (progressValue6 == progressEndValue6) {
+      clearInterval(progress6);
+    }
+  }, speed6);
